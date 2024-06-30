@@ -1,11 +1,12 @@
 // The keys and notes variables store the piano keys
 const keys = ['c-key', 'd-key', 'e-key', 'f-key', 'g-key', 'a-key', 'b-key', 'high-c-key', 'c-sharp-key', 'd-sharp-key', 'f-sharp-key', 'g-sharp-key', 'a-sharp-key'];
 const notes = [];
-const pianoSong = document.getElementById('song');
-// keys.forEach(function(key){
-//   notes.push(document.getElementById(key));
-// })
+// const songNames = ["song-C1", "song-D4", "song-E2", "song-F4", "song-G5","song-A2", "song-B4", "song-C3"];
+// const audioElements = [];
+const buttonsNames = ["play-C1", "play-D4", "play-E2", "play-F4", "play-G5", "play-A2", "play-B4", "play-C3"];
+const buttonsElements = [];
 
+//Function to get piano keys elements
 keys.forEach((key) => notes.push(document.getElementById(key))); 
 
 // function that change the color of the keys below
@@ -16,11 +17,23 @@ const keyReturn = event => event.target.style.backgroundColor = '';
 const playPiano = note => {
     note.addEventListener('mousedown', keyPlay);
     note.addEventListener('mouseup', keyReturn);
-    //pianoSong.onplay = () => {console.log('play')};
+    
 }
 
 // loop that runs the array elements through the function
 notes.forEach(playPiano); 
+
+//Function to get btn DOM elements:
+buttonsNames.forEach(buttonName => buttonsElements.push(document.getElementById(buttonName)));
+
+//Hidden btn elements: 
+buttonsElements.forEach(btn => btn.hidden = true)
+
+//Function for play song
+function playAudio(audioId) {
+  let audio = document.getElementById(audioId);
+  audio.play(); 
+}
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');

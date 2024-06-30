@@ -10,44 +10,92 @@
   <p class='title'>Piano Player</p>
   <p id='demo'>Follow the song below to play  the piano.</p>
   <section class="piano">
-    <section id='c-key' class="key">
+
+    <section id='c-key' class="key" onclick="playAudio('song-C1')">
       <section class='keynote'>C</section>
+      <audio id="song-C1" preload="auto">
+        <source src="./songs/C1.mp3" type="audio/mp3">
+      </audio>
+      <button id="play-C1"> Here </button> 
     </section>
+
     <section id='c-sharp-key' class="black-key">
       <section class='black-keynote'>C#</section>
     </section>
-    <section id='d-key' class="key">
+
+    <section id='d-key' class="key" onclick="playAudio('song-D4')">
       <section class='keynote'>D</section>
+      <audio id="song-D4" preload="auto">
+        <source src="./songs/D4.mp3" type="audio/mp3">
+      </audio>
+      <button id="play-D4"> Here </button> 
     </section>
+
     <section id='d-sharp-key' class="black-key">
       <section class='black-keynote'>D#</section>
     </section>
-    <section id='e-key' class="key">
+
+    <section id='e-key' class="key" onclick="playAudio('song-E2')">
       <section class='keynote'>E</section>
+      <audio id="song-E2" preload="auto">
+        <source src="./songs/E2.mp3" type="audio/mp3">
+      </audio>
+      <button id="play-E2"> Here </button> 
     </section>
-    <section id='f-key' class="key">
+
+    <section id='f-key' class="key" onclick="playAudio('song-F4')">
       <section class='keynote'>F</section>
+      <audio id="song-F4" preload="auto">
+        <source src="./songs/F4.mp3" type="audio/mp3">
+      </audio>
+      <button id="play-F4"> Here </button> 
     </section>
+
     <section id='f-sharp-key' class="black-key">
       <section class='black-keynote'>F#</section>
     </section>
-    <section id='g-key' class="key">
+
+    <section id='g-key' class="key" onclick="playAudio('song-G5')">
       <section class='keynote'>G</section>
+      <audio id="song-G5" preload="auto">
+        <source src="./songs/G5.mp3" type="audio/mp3">
+      </audio>
+      <button id="play-G5"> Here </button> 
     </section>
+
     <section id='g-sharp-key' class="black-key">
       <section class='black-keynote'>G#</section>
     </section>
-    <section id='a-key' class="key">
+
+    <section id='a-key' class="key" onclick="playAudio('song-A2')">
       <section class='keynote'>A</section>
+      <audio id="song-A2" preload="auto">
+        <source src="./songs/A2.mp3" type="audio/mp3">
+      </audio>
+      <button id="play-A2"> Here </button> 
     </section>
+
     <section id='a-sharp-key' class="black-key">
       <section class='black-keynote'>A#</section>
     </section>
-    <section id='b-key' class="key">
+
+    <section id='b-key' class="key" onclick="playAudio('song-B4')">
+      
       <section class='keynote'>B</section>
+
+      <audio id="song-B4" preload="auto">
+        <source src="./songs/B4.mp3" type="audio/mp3">
+      </audio>
+      <button id="play-B4"> Here </button> 
+
     </section>
-    <section id='high-c-key' class="key">
+
+    <section id='high-c-key' class="key" onclick="playAudio('song-C3')">
       <div class='keynote'>C</div>
+      <audio id="song-C3" preload="auto">
+        <source src="./songs/C3.mp3" type="audio/mp3">
+      </audio>
+      <button id="play-C3"> Here </button> 
     </section>
   </section>
 
@@ -87,7 +135,7 @@
     <button id="fourth-next-line">Reset</button>
   </section>
 
-  <audio id="song" src="./piano.wav" preload="auto"></audio>
+  
   
   <script  src="main.js"></script>
 
