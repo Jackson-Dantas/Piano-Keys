@@ -39,6 +39,10 @@ body{
     background-color: white;
     color: #141c3a;
   }
+
+  .btn-song{
+    display: none;
+  }
   .black-key{
     width: 25px;
     height: 100px;
